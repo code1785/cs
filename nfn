@@ -1,0 +1,17 @@
+books = ["Война и мир", "Преступление и наказание", "Мастер и Маргарита"]
+
+def search_book(name):
+    for book in books:
+        if name.lower() in book.lower():
+            print(book)
+
+def delete_book(name):
+    if name in books:
+        books.remove(name)
+        print("Книга удалена")
+    else:
+        print("Книга не найдена")
+
+search_book("война")
+delete_book("Мастер и Маргарита")
+print(books)
